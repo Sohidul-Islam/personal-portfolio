@@ -8,11 +8,18 @@ import Paper from '@mui/material/Paper';
 import { width } from '@mui/system';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Typography } from '@mui/material';
-
 import { TypeAnimation } from 'react-type-animation';
+// Icon List start
+import FacebookIcon from '@mui/icons-material/Facebook';
+//Icon List end
 
+// Image list start
 import img1 from '../../images/me_with_bg-1.png'
+// Image list end
+
+// Custom components start
 import ButtonType1 from './../ButtonType1/ButtonType1';
+// Custom Components end
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -78,18 +85,57 @@ const Home = () => {
                                 </Box>
 
                                 <Box>
-                                    <Grid container spacing={2} sx={{ width: "100%" }}>
+                                    <Grid container spacing={2} sx={{ width: "100%" }} justifyContent="space-between">
                                         <Grid item md={6}>
                                             <Typography>
                                                 FIND WITH ME
                                             </Typography>
-                                            <ButtonType1 />
+                                            <ul style={{ display: "flex", flexWrap: "wrap", justifyContent: "left", listStyle: "none", paddingLeft: "30px" }}>
+                                                <li>
+                                                    <ButtonType1>
+                                                        {/* <FacebookIcon /> */}
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                                    </ButtonType1>
+                                                </li>
+                                                <li>
+                                                    <ButtonType1>
+                                                        {/* <FacebookIcon /> */}
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                                    </ButtonType1>
+                                                </li>
+                                                <li>
+                                                    <ButtonType1>
+                                                        {/* <FacebookIcon /> */}
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                                    </ButtonType1>
+                                                </li>
+                                            </ul>
+
                                         </Grid>
                                         <Grid item md={6}>
                                             <Typography>
                                                 FIND WITH ME
                                             </Typography>
-                                            <ButtonType1 />
+                                            <ul style={{ display: "flex", flexWrap: "wrap", justifyContent: "left", listStyle: "none", paddingLeft: "30px" }}>
+                                                <li>
+                                                    <ButtonType1>
+                                                        {/* <FacebookIcon /> */}
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                                    </ButtonType1>
+                                                </li>
+                                                <li>
+                                                    <ButtonType1>
+                                                        {/* <FacebookIcon /> */}
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                                    </ButtonType1>
+                                                </li>
+                                                <li>
+                                                    <ButtonType1>
+                                                        {/* <FacebookIcon /> */}
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                                    </ButtonType1>
+                                                </li>
+                                            </ul>
                                         </Grid>
                                     </Grid>
 
