@@ -10,7 +10,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Typography } from '@mui/material';
 import { TypeAnimation } from 'react-type-animation';
 // Icon List start
-import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 //Icon List end
 
 // Image list start
@@ -19,6 +20,7 @@ import img1 from '../../images/me_with_bg-1.png'
 
 // Custom components start
 import ButtonType1 from './../ButtonType1/ButtonType1';
+import Banner from './../Banner1/Banner';
 // Custom Components end
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -86,26 +88,24 @@ const Home = () => {
                                         <Grid container spacing={2} sx={{ width: "100%" }} justifyContent="space-between">
                                             <Grid item md={6}>
                                                 <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "left", listStyle: "none", paddingLeft: "0", width: "100%" }}>
-                                                    <Typography sx={{ textAlign: 'left' }}>
+                                                    <Typography sx={{ textAlign: 'left', fontSize: "16px", fontWeight: 500, fontFamily: '"Poppins", "Sans-serif"', color: "#1e2125" }}>
                                                         FIND WITH ME
                                                     </Typography>
                                                     <ul style={{ display: "flex", flexWrap: "wrap", listStyle: "none", paddingLeft: "0", width: "100%" }}>
                                                         <li style={{ marginRight: "16px" }}>
-                                                            <ButtonType1>
+                                                            <ButtonType1 link="https://www.facebook.com/sishufol">
                                                                 {/* <FacebookIcon /> */}
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                                                             </ButtonType1>
                                                         </li>
                                                         <li style={{ marginRight: "16px" }}>
-                                                            <ButtonType1>
-                                                                {/* <FacebookIcon /> */}
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                                            <ButtonType1 link="https://www.twitter.com/sishufol">
+                                                                <TwitterIcon />
                                                             </ButtonType1>
                                                         </li>
                                                         <li style={{ marginRight: "16px" }}>
-                                                            <ButtonType1>
-                                                                {/* <FacebookIcon /> */}
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                                            <ButtonType1 link="https://www.linkedin.com/in/sishufol">
+                                                                <LinkedInIcon />
                                                             </ButtonType1>
                                                         </li>
                                                     </ul>
@@ -113,26 +113,26 @@ const Home = () => {
                                             </Grid>
                                             <Grid item md={6}>
                                                 <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "left", listStyle: "none", paddingLeft: "0", width: "100%" }}>
-                                                    <Typography sx={{ textAlign: 'left' }}>
-                                                        FIND WITH ME
+                                                    <Typography sx={{ textAlign: 'left', fontSize: "16px", fontWeight: 500, fontFamily: '"Poppins", "Sans-serif"', color: "#1e2125" }}>
+                                                        BEST SKILL ON
                                                     </Typography>
                                                     <ul style={{ display: "flex", flexWrap: "wrap", listStyle: "none", paddingLeft: "0", width: "100%" }}>
                                                         <li style={{ marginRight: "16px" }}>
                                                             <ButtonType1>
                                                                 {/* <FacebookIcon /> */}
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                                                <img decoding="async" src="https://rainbowit.net/themes/inbio/wp-content/uploads/2021/08/icons-03.png" class="attachment-full size-full" alt="figma" loading="lazy"></img>
                                                             </ButtonType1>
                                                         </li>
                                                         <li style={{ marginRight: "16px" }}>
                                                             <ButtonType1>
                                                                 {/* <FacebookIcon /> */}
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                                                <img decoding="async" src="https://w7.pngwing.com/pngs/831/155/png-transparent-game-react-native-javascript-android-physics-symmetry-web-application-vuejs-thumbnail.png" class="attachment-full size-full" alt="react" loading="lazy"></img>
                                                             </ButtonType1>
                                                         </li>
                                                         <li style={{ marginRight: "16px" }}>
                                                             <ButtonType1>
                                                                 {/* <FacebookIcon /> */}
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                                                <img decoding="async" src="https://cdn.iconscout.com/icon/free/png-256/node-js-1174925.png" class="attachment-full size-full" alt="react" loading="lazy"></img>
                                                             </ButtonType1>
                                                         </li>
                                                     </ul>
@@ -162,8 +162,10 @@ const Home = () => {
                             }}
                         >
                             <Item elevation={0}>
-                                <Box style={{ width: '100%', height: '100%' }}>
-                                    <img style={{ width: '100%' }} src={img1}></img>
+                                <Box>
+                                    {/* <Box style={{ width: '100%', height: '100%' }}> */}
+                                    {/* <img style={{ width: '100%' }} src={img1}></img> */}
+                                    <Banner />
                                 </Box>
                             </Item>
 

@@ -162,11 +162,11 @@ const Navigation = (props) => {
                                 component="div"
                                 sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, color: "#000" }}
                             >
-                                <Stack direction="row" alignItems="center" spacing={2}>
+                                <Stack direction="row" alignItems="center" spacing={2} sx={{ py: 2 }}>
                                     <Avatar
                                         alt="Remy Sharp"
                                         src={img1}
-                                        sx={{ width: 56, height: 56 }}
+                                        sx={{ width: 80, height: 80, }}
                                     />
                                     <Typography variant='brand' theme={theme}>
                                         SOHIDUL
@@ -203,7 +203,7 @@ const Navigation = (props) => {
                     </Drawer>
                 </Box>
                 <Container>
-                    <Box component="main" sx={{ p: 3 }}  >
+                    <Box component="main" sx={{ py: 10 }}  >
                         <Toolbar />
                         {/* <Typography variant='paragraph' theme={theme}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde
