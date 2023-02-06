@@ -43,7 +43,7 @@ const Home = () => {
         <ThemeProvider theme={themeColor}>
             <Box sx={{ flexGrow: 1 }}>
                 <Grid container spacing={2} sx={{ width: "100%" }}>
-                    <Grid item xs={12} md={7}>
+                    <Grid item xs={12} md={8}>
 
                         <Box
                             sx={{
@@ -82,71 +82,76 @@ const Home = () => {
                                     <Typography sx={{ letterSpacing: 1.25 }}>
                                         As a MERN stack web developer, I specialize in building dynamic and efficient web applications using MongoDB, Express, React, and Node.js. With a strong foundation in JavaScript and a passion for creating intuitive user experiences, I have a proven track record of delivering high-quality projects that meet the needs of both businesses and end-users. Whether building a single-page app or a complex web platform, I am committed to writing clean, maintainable code that is optimized for performance and scalability.
                                     </Typography>
-                                </Box>
-
-                                <Box>
-                                    <Grid container spacing={2} sx={{ width: "100%" }} justifyContent="space-between">
-                                        <Grid item md={6}>
-                                            <Typography>
-                                                FIND WITH ME
-                                            </Typography>
-                                            <ul style={{ display: "flex", flexWrap: "wrap", justifyContent: "left", listStyle: "none", paddingLeft: "30px" }}>
-                                                <li>
-                                                    <ButtonType1>
-                                                        {/* <FacebookIcon /> */}
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                                                    </ButtonType1>
-                                                </li>
-                                                <li>
-                                                    <ButtonType1>
-                                                        {/* <FacebookIcon /> */}
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                                                    </ButtonType1>
-                                                </li>
-                                                <li>
-                                                    <ButtonType1>
-                                                        {/* <FacebookIcon /> */}
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                                                    </ButtonType1>
-                                                </li>
-                                            </ul>
+                                    <Box sx={{ pt: 10 }}>
+                                        <Grid container spacing={2} sx={{ width: "100%" }} justifyContent="space-between">
+                                            <Grid item md={6}>
+                                                <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "left", listStyle: "none", paddingLeft: "0", width: "100%" }}>
+                                                    <Typography sx={{ textAlign: 'left' }}>
+                                                        FIND WITH ME
+                                                    </Typography>
+                                                    <ul style={{ display: "flex", flexWrap: "wrap", listStyle: "none", paddingLeft: "0", width: "100%" }}>
+                                                        <li style={{ marginRight: "16px" }}>
+                                                            <ButtonType1>
+                                                                {/* <FacebookIcon /> */}
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                                            </ButtonType1>
+                                                        </li>
+                                                        <li style={{ marginRight: "16px" }}>
+                                                            <ButtonType1>
+                                                                {/* <FacebookIcon /> */}
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                                            </ButtonType1>
+                                                        </li>
+                                                        <li style={{ marginRight: "16px" }}>
+                                                            <ButtonType1>
+                                                                {/* <FacebookIcon /> */}
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                                            </ButtonType1>
+                                                        </li>
+                                                    </ul>
+                                                </Box>
+                                            </Grid>
+                                            <Grid item md={6}>
+                                                <Box sx={{ display: "flex", flexWrap: "wrap", justifyContent: "left", listStyle: "none", paddingLeft: "0", width: "100%" }}>
+                                                    <Typography sx={{ textAlign: 'left' }}>
+                                                        FIND WITH ME
+                                                    </Typography>
+                                                    <ul style={{ display: "flex", flexWrap: "wrap", listStyle: "none", paddingLeft: "0", width: "100%" }}>
+                                                        <li style={{ marginRight: "16px" }}>
+                                                            <ButtonType1>
+                                                                {/* <FacebookIcon /> */}
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                                            </ButtonType1>
+                                                        </li>
+                                                        <li style={{ marginRight: "16px" }}>
+                                                            <ButtonType1>
+                                                                {/* <FacebookIcon /> */}
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                                            </ButtonType1>
+                                                        </li>
+                                                        <li style={{ marginRight: "16px" }}>
+                                                            <ButtonType1>
+                                                                {/* <FacebookIcon /> */}
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                                                            </ButtonType1>
+                                                        </li>
+                                                    </ul>
+                                                </Box>
+                                            </Grid>
 
                                         </Grid>
-                                        <Grid item md={6}>
-                                            <Typography>
-                                                FIND WITH ME
-                                            </Typography>
-                                            <ul style={{ display: "flex", flexWrap: "wrap", justifyContent: "left", listStyle: "none", paddingLeft: "30px" }}>
-                                                <li>
-                                                    <ButtonType1>
-                                                        {/* <FacebookIcon /> */}
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                                                    </ButtonType1>
-                                                </li>
-                                                <li>
-                                                    <ButtonType1>
-                                                        {/* <FacebookIcon /> */}
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                                                    </ButtonType1>
-                                                </li>
-                                                <li>
-                                                    <ButtonType1>
-                                                        {/* <FacebookIcon /> */}
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                                                    </ButtonType1>
-                                                </li>
-                                            </ul>
-                                        </Grid>
-                                    </Grid>
 
+                                    </Box>
                                 </Box>
+
+
 
                             </Item>
 
                         </Box>
 
                     </Grid>
-                    <Grid item xs={12} md={5}>
+                    <Grid item xs={12} md={4}>
 
                         <Box
                             sx={{
