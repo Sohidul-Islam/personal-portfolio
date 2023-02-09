@@ -22,6 +22,7 @@ import img1 from '../../images/me-2.png';
 // Customs Components
 import Home from '../Home/Home';
 import Features from './../Features/Features';
+import Portfolio from './../Portfolio/Portfolio';
 const drawerWidth = 240;
 const navItems = ['HOME',
     'FEATURES',
@@ -194,8 +195,10 @@ const Navigation = (props) => {
                     <Box component="main" sx={{ py: 10 }}  >
                         <Toolbar />
                         <Home />
-                        <Divider sx={{ my: 4 }} variant="middle" />
+                        <Divider sx={{ my: 8 }} variant="middle" />
                         <Features />
+                        <Divider sx={{ my: 8 }} variant="middle" />
+                        <Portfolio />
                     </Box>
                 </Container>
             </Box>
