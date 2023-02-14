@@ -45,7 +45,6 @@ export default function Portfolio() {
             </Text2>
             <Box sx={{ pt: 3 }}>
                 <Grid container spacing={8} columns={{ xs: 4, sm: 8, md: 12 }} >
-
                     <Grid item>
                         <h1>Gallery 1</h1>
                     </Grid>

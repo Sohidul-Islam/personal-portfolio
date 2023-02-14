@@ -61,6 +61,7 @@ export default function Card({ feature }) {
     height: 100%;
     z-index: 2;
     cursor: default;
+    border-radius: 6px;
     tranisition: background 0.5s ease-in;
     &:hover{
         color: #fff !important;
@@ -68,6 +69,7 @@ export default function Card({ feature }) {
     &:hover ${Overlay} {
         opacity: 1;
         visibility: visible;
+        border-radius: 6px;
     }
     &:hover ${IconBox1} {
     color: #fff;
