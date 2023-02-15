@@ -2,22 +2,48 @@ import React from 'react'
 import styled from 'styled-components'
 import { Grid, Typography } from '@mui/material'
 import { Box } from '@mui/system';
+import PortfolioCard from '../PortfolioCard/PortfolioCard';
+import ecommerceImg from '../../images/moc/emajohn.png';
+import doctorsPortal from '../../images/moc/doctors portal.png';
+import weatherLive from '../../images/moc/weather.png';
+import bookArchieve from '../../images/moc/book.png';
+import calculator from '../../images/moc/calculator.png';
 
 export default function Portfolio() {
     const PortfolioData = [
         {
-            title: 'Business Stratagy',
-            desc: 'We’ll help you optimize your business processes to maximize profitability and eliminate unnecessary costs.',
+            title: 'E Commerce Site',
+            image: ecommerceImg,
+            live: "https://ema-john-shop-2022.firebaseapp.com/",
+            files: "https://github.com/Sohidul-Islam/ecommerce-clientsite"
 
         },
         {
-            title: 'App Development',
-            desc: 'We’ll handle everything from to app development process until it is time to make your project live.',
+            title: 'Doctors Portal',
+            image: doctorsPortal,
+            live: "https://doctors-portal-7a86b.web.app",
+            files: "https://github.com/Sohidul-Islam/doctorsPortal"
 
         },
         {
-            title: 'UX Consulting',
-            desc: 'A UX consultant is responsible for many of the same tasks as a UX designer, but they typically.',
+            title: 'Weather Live',
+            image: weatherLive,
+            live: "https://sohidul-islam.github.io/weatherlive",
+            files: "https://github.com/Sohidul-Islam/weatherlive"
+
+        },
+        {
+            title: 'Book archieve page',
+            image: bookArchieve,
+            live: "https://sohidul-islam.github.io/booklibrary",
+            files: "https://github.com/Sohidul-Islam/booklibrary"
+
+        },
+        {
+            title: 'Calculator',
+            image: calculator,
+            live: "https://sohidul-islam.github.io/calculator",
+            files: "https://github.com/Sohidul-Islam/calculator"
 
         },
 
@@ -44,10 +70,15 @@ export default function Portfolio() {
                 My Portfolio
             </Text2>
             <Box sx={{ pt: 3 }}>
-                <Grid container spacing={8} columns={{ xs: 4, sm: 8, md: 12 }} >
-                    <Grid item>
-                        <h1>Gallery 1</h1>
-                    </Grid>
+                <Grid container spacing={4} columns={{ xs: 4, sm: 8, md: 12, xl: 12 }} >
+                    {
+                        PortfolioData.map((portfolio, index) =>
+                            <Grid item xs={4} sm={4} md={6} xl={4} key={index}>
+                                <PortfolioCard data={portfolio} />
+                            </Grid>
+                        )
+                    }
+
                 </Grid>
 
 
