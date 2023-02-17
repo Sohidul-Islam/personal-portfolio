@@ -23,6 +23,7 @@ import img1 from '../../images/me-2.png';
 import Home from '../Home/Home';
 import Features from './../Features/Features';
 import Portfolio from './../Portfolio/Portfolio';
+import Resume from '../Resume/Resume';
 const drawerWidth = 240;
 const navItems = ['HOME',
     'FEATURES',
@@ -199,6 +200,8 @@ const Navigation = (props) => {
                         <Features />
                         <Divider sx={{ my: 8 }} variant="middle" />
                         <Portfolio />
+                        <Divider sx={{ my: 8 }} variant="middle" />
+                        <Resume />
                     </Box>
                 </Container>
             </Box>

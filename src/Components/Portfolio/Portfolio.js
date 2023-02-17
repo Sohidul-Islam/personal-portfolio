@@ -16,35 +16,30 @@ export default function Portfolio() {
             image: ecommerceImg,
             live: "https://ema-john-shop-2022.firebaseapp.com/",
             files: "https://github.com/Sohidul-Islam/ecommerce-clientsite"
-
         },
         {
             title: 'Doctors Portal',
             image: doctorsPortal,
             live: "https://doctors-portal-7a86b.web.app",
             files: "https://github.com/Sohidul-Islam/doctorsPortal"
-
         },
         {
             title: 'Weather Live',
             image: weatherLive,
             live: "https://sohidul-islam.github.io/weatherlive",
             files: "https://github.com/Sohidul-Islam/weatherlive"
-
         },
         {
             title: 'Book archieve page',
             image: bookArchieve,
             live: "https://sohidul-islam.github.io/booklibrary",
             files: "https://github.com/Sohidul-Islam/booklibrary"
-
         },
         {
             title: 'Calculator',
             image: calculator,
             live: "https://sohidul-islam.github.io/calculator",
             files: "https://github.com/Sohidul-Islam/calculator"
-
         },
 
     ]
@@ -60,7 +55,6 @@ export default function Portfolio() {
         font-weight: 600 !important;
         font-size: 60px !important;
     `
-
     return (
         <Box sx={{ px: 2 }}>
             <Text1>
@@ -78,10 +72,7 @@ export default function Portfolio() {
                             </Grid>
                         )
                     }
-
                 </Grid>
-
-
             </Box>
         </Box >
     )
