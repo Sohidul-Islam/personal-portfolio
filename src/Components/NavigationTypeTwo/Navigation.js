@@ -1,23 +1,12 @@
 import { Box } from '@mui/system';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import Responsive from '../../Utilities/Responsive';
+import Loader from '../Loader/Loader';
 
-export default function Navigation({ item, isActiveFunction }) {
-    // console.log(item);
-    const [size, device, device2] = Responsive;
-
-    // console.log("Responsive: ", device2);
-    // style={{ color: isActive ? "#ff014f" : "#1e212", boxShadow: isActive ? "5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff" : "#1e212", }}
-
-    let activeStyle = {
-        textDecoration: "underline",
-    };
-
-    let activeClassName = "underline";
-
-    const NavContainer = styled(Box)`
+const [size, device, device2] = Responsive;
+const NavContainer = styled(Box)`
     display: flex;
     background: linear-gradient(145deg, #e2e8ec, #ffffff);
     box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
@@ -26,14 +15,13 @@ export default function Navigation({ item, isActiveFunction }) {
         flex-direction: column;
     }
     `;
-    const NavItemBox = styled(Box)`
+const NavItemBox = styled(Box)`
     display: flex;
     flex-basis: 25%;
-    background: linear-gradient(145deg, #e2e8ec, #ffffff);
+
     
     `;
-    const NavItem = styled(NavLink)`
-    // color: #1e212;
+const NavItem = styled(Link)`
     text-decoration: none;
     width:100%;
     font-size: 18px;
@@ -42,28 +30,61 @@ export default function Navigation({ item, isActiveFunction }) {
     padding: 30px 10px;
     margin-bottom: -1px
     transition: all 0.4s ease-in-out;
+    
     &:hover,&:active{
     color: #ff014f;
     margin-bottom: -2px
     }
+
     &:hover,&:active ${NavItemBox}{
-    color: #ff014f;
-    box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+    background-color: linear-gradient(145deg, #e2e8ec, #ffffff);
+    box-shadow: 10px 5px 15px #D1D9E6, -10px -5px 15px #ffffff;
+    border-radius: 8px;
     }
     `;
+export default function Navigation({ item }) {
+    // console.log(item);
 
-    // onClick={() => { isActiveFunction(key) }}
+
+    const [navItem, setNavItem] = useState(item);
+
+    // console.log("Responsive: ", device2);
+    // style={{ color: isActive ? "#ff014f" : "#1e212", boxShadow: isActive ? "5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff" : "#1e212", }}
+    // useEffect(() => {
+    //     setNavItem(item);
+    // }, [navItem])
+    const isActiveFunction = async (id) => {
+        setNavItem([]);
+        let prev = await navItem.findIndex(x => x.isActive === true);
+        let tmp = navItem;
+        tmp[prev].isActive = false;
+        tmp[id].isActive = true;
+        const newNavItem = tmp;
+        setNavItem(newNavItem);
+    }
     return (
-        <NavContainer>
-            {item.map((data, key) => (
-                <NavItemBox key={key}>
-                    <NavItem style={({ isActive }) => ({
-                        color: isActive ? 'greenyellow' : 'white'
-                    })} to={data.path}>{data.itemName}</NavItem>
-                </NavItemBox>
+        <>
 
-            ))
-            }
-        </NavContainer >
+            <NavContainer>
+                {navItem.map((data, key) => (
+                    <NavItemBox style={{
+                        color: data.isActive === true ? "#ff014f" : "#1e2125",
+                        background: data.isActive === true ? "#linear-gradient(145deg, #e2e8ec, #ffffff)" : "",
+                        boxShadow: data.isActive === true ? "10px 5px 15px #D1D9E6, -10px -5px 15px #ffffff" : "",
+                        borderRadius: data.isActive === true ? "8px" : "",
+
+                    }} key={key}>
+                        <NavItem style={{
+                            color: data.isActive === true ? "#ff014f" : "#1e2125",
+                            fontWeight: data.isActive === true ? "600" : "400",
+                        }} onClick={() => { isActiveFunction(key) }} to={data.path}>{data.itemName}
+                        </NavItem>
+                    </NavItemBox>
+
+                ))
+                }
+            </NavContainer >
+        </>
+
     )
 }

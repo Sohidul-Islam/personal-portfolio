@@ -1,65 +1,126 @@
-import { Grid, Typography } from '@mui/material'
+import { Grid, Grow, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
 import styled from 'styled-components'
+import Loader from '../Loader/Loader'
 import TimeLine from '../Timeline/TimeLine'
 
-const ProfessionalSkills = () => {
-
-    const EducationInfo = [
-        {
-            title: "BSc & Computer Science & Engineering",
-            subtitle: "Port City International University (2019-2023)",
-            badge: "3.92/4",
-            desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem alias doloribus minima beatae eaque possimus aperiam nulla qui debitis! Deserunt voluptatum odit a aliquid tempora beatae repellat pariatur natus quia."
-        },
-        {
-            title: "Higher Secondary School Certificates",
-            subtitle: "Moulavi Samsul Karim College (2016-2018)",
-            badge: "2.92/5",
-            desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem alias doloribus minima beatae eaque possimus aperiam nulla qui debitis! Deserunt voluptatum odit a aliquid tempora beatae repellat pariatur natus quia."
-        },
-        {
-            title: "Secondary School Certificates",
-            subtitle: "Moulavi Samsul Karim College",
-            badge: "4.67/5",
-            desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem alias doloribus minima beatae eaque possimus aperiam nulla qui debitis! Deserunt voluptatum odit a aliquid tempora beatae repellat pariatur natus quia."
-        },
-    ]
-    const Text1 = styled(Typography)`
+const Text1 = styled(Typography)`
     font-size: 18px !important;
-    color: #000;
+    color: #ff014f;
     font-weight: 400 !important;
     font-family: "Poppins", sans-serif;
     `
-    const Text2 = styled(Typography)`
-    font-size: 36px !important;
+const Text2 = styled(Typography)`
+    font-size: 30px !important;
     color: #000;
     font-weight: 800 !important;
     font-family: "Montserrat", sans-serif;
     `
-    const TextBox = styled(Box)`
+const TextBox = styled(Box)`
     margin: 40px 0px;
     `
+const ProfessionalSkills = () => {
+    const DesignSkill = [
+        {
+            label: "ADOBE PHOTOSHOP",
+            percentage: "60%"
+        },
+        {
+            label: "ADOBE ILLUSTRATOR",
+            percentage: "60%"
+        },
+        {
+            label: "Figma",
+            percentage: "70%"
+        },
+        {
+            label: "DESIGN",
+            percentage: "80%"
+        },
+        {
+            label: "HTML",
+            percentage: "80%"
+        },
+        {
+            label: "CSS",
+            percentage: "80%"
+        },
+        {
+            label: "BOOTSTRAP",
+            percentage: "80%"
+        },
+        {
+            label: "TAILWIND CSS",
+            percentage: "80%"
+        },
+        {
+            label: "MATERIAL UI",
+            percentage: "80%"
+        },
+    ]
+    const DevelopmentSkill = [
+        {
+            label: "JS",
+            percentage: "70%"
+        },
+        {
+            label: "NodeJs",
+            percentage: "70%"
+        },
+        {
+            label: "Expres Js",
+            percentage: "70%"
+        },
+        {
+            label: "ReactJs",
+            percentage: "80%"
+        },
+        {
+            label: "MongoDb",
+            percentage: "70%"
+        },
+        {
+            label: "MySql",
+            percentage: "70%"
+        },
+        {
+            label: "ReduxJs",
+            percentage: "70%"
+        },
+        {
+            label: "NextJs",
+            percentage: "70%"
+        },
+    ]
+
     return (
-        <Box sx={{ my: 4 }}>
-            <Grid container spacing={4} columns={{ xs: 4, sm: 8, md: 12, xl: 12 }} >
-                <Grid item xs={4} sm={4} md={6} xl={6} >
-                    <TextBox>
-                        <Text1>2016-2023</Text1>
-                        <Text2>Education</Text2>
-                    </TextBox>
-                    <TimeLine data={EducationInfo}></TimeLine>
+        <Grow
+            in={!false}
+            style={{ transformOrigin: '0 0 0' }}
+            {...(!false ? { timeout: 1000 } : {})}
+        >
+            <Box sx={{ my: 4 }}>
+                <Grid container spacing={8} columns={{ xs: 4, sm: 8, md: 12, xl: 12 }} >
+                    <Grid item xs={4} sm={4} md={6} xl={6} >
+                        <TextBox>
+                            <Text1>Features</Text1>
+                            <Text2>Design Skill</Text2>
+                        </TextBox>
+
+                        {DesignSkill.map((data, index) => <Loader label={data.label} percentage={data.percentage}></Loader>)}
+                    </Grid>
+                    <Grid item xs={4} sm={4} md={6} xl={6} >
+                        <TextBox>
+                            <Text1>Features</Text1>
+                            <Text2>Development Skill</Text2>
+                        </TextBox>
+
+                        {DevelopmentSkill.map((data, index) => <Loader label={data.label} percentage={data.percentage}></Loader>)}
+                    </Grid>
                 </Grid>
-                <Grid item xs={4} sm={4} md={6} xl={6} >
-                    <TextBox>
-                        <Text1>2016-2023</Text1>
-                        <Text2>Education</Text2>
-                    </TextBox>
-                    <TimeLine data={EducationInfo}></TimeLine>
-                </Grid>
-            </Grid>
-        </Box>
+            </Box>
+        </Grow>
     )
 }
 

@@ -39,6 +39,7 @@
   border: 4px solid #d9dee2;
   top: 32px;
   border-radius: 50%;
+  transition: all 0.5s ease;
   z-index: 1;
 }
 
@@ -73,13 +74,14 @@
 
 .right::before {
   content: " ";
-  height: 2px;
+  height: 6px;
   position: absolute;
   top: 39px;
   width: 50px;
   z-index: -1;
   left: 0px;
-  border: medium solid #d9dee2;
+  background-color: #d9dee2;
+  /* border: medium solid #d9dee2; */
   /* border-width: 10px 10px 10px 10px; */
   /* border-color: transparent white transparent transparent; */
 }
@@ -113,9 +115,9 @@
   /* Make sure that all arrows are pointing leftwards */
   .container::before {
     left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    /* border: medium solid white; */
+    /* border-width: 10px 10px 10px 0; */
+    /* border-color: transparent white transparent transparent; */
   }
 
   /* Make sure all circles are at the same spot */
@@ -124,8 +126,21 @@
     left: 15px;
   }
 
+  .right::before {
+    content: " ";
+    height: 4px;
+    position: absolute;
+    top: 40px;
+    width: 50px;
+    z-index: -1;
+    left: 24px;
+    background-color: #d9dee2;
+    /* border: 1px solid #d9dee2; */
+    /* border-width: 10px 10px 10px 10px; */
+    /* border-color: transparent white transparent transparent; */
+  }
   /* Make all right containers behave like the left ones */
   .right {
-    left: 0%;
+    left: 0;
   }
 }

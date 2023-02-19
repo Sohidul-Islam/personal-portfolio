@@ -6,8 +6,8 @@ import styled from 'styled-components';
 import Heart from '@mui/icons-material/Favorite';
 
 const PortfolioCard = ({ data }) => {
-    console.log("data: ", data);
-    console.log("image: ", data.image);
+    // console.log("data: ", data);
+    // console.log("image: ", data.image);
     const [like, setLIke] = useState(parseInt(Math.random() * 100));
     const Container = styled(Box)`
     width:100%;
