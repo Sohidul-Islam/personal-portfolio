@@ -3,6 +3,7 @@ import './TimeLine.css';
 import styled from 'styled-components';
 import { Divider, Grid, Grow } from '@mui/material';
 import { Box } from '@mui/system';
+import { Link } from 'react-router-dom';
 
 const Heading = styled(Box)`
     display: flex;
@@ -56,6 +57,30 @@ const ResumeOverlay = styled.div`
   transition: all 0.5s ease-in;
     
     `;
+const LinkButton = styled(Box)`
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: #ffffff;
+    box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+    transition: all 0.4s ease-in;
+    a{
+        text-decoration: none;
+        color: #ff014f;
+        font-weight: 600;
+        font-size: 18px;
+        transition: all 0.4s ease-in;
+    }
+    &:hover{
+        background: #ff014f;
+        box-shadow: none;
+    }
+    &:hover a {
+        color: #fff;
+        box-shadow: none;
+    }
+    
+    `
 
 const TimelineContainer = styled.div`
     color: #3c3e41;
@@ -81,7 +106,18 @@ const TimelineContainer = styled.div`
         color: #fff;
     }
     }
+
+    &:hover ${LinkButton}{
+    background: #ff014f;
+    box-shadow: none;
+    & a {
+        color: #fff;
+        box-shadow: none;
+    }
+    }
     `
+
+
 
 export default function TimeLine({ data }) {
     return (
@@ -103,14 +139,16 @@ export default function TimeLine({ data }) {
                                     <p>{item.badge}</p>
                                 </Badge>
                             </Heading>
+
                             <Divider />
                             <DescripTion>{item.desc}</DescripTion>
+
+                            {item?.link ? <LinkButton><a href={item.link}>Go to</a></LinkButton> : ""}
                             <ResumeOverlay>
                             </ResumeOverlay>
                         </TimelineContainer>
                     </div>))
                     }
-
                 </div>
             </Grow>
 

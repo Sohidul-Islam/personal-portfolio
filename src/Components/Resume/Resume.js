@@ -7,6 +7,7 @@ import Experience from '../Experience/Experience'
 import Navigation from '../NavigationTypeTwo/Navigation'
 import ProfessionalSkills from '../ProfessionalSkills/ProfessionalSkills'
 import Interveiw from '../Interveiw/Interveiw'
+import Achievement from '../Achievement/Achievement'
 
 const Title = styled(Typography)`
 color: #3c3e41;
@@ -44,10 +45,15 @@ export default function Resume() {
             path: '/interveiw',
             isActive: false
         },
+        {
+            itemName: 'Achievement',
+            path: '/achievement',
+            isActive: false
+        },
     ]);
 
     return (
-        <div>
+        <div id="resume">
             <SubTitle>
                 2+ YEARS OF EXPERIENCE
             </SubTitle>
@@ -67,6 +73,9 @@ export default function Resume() {
 
                     </Route>
                     <Route exact path="/interveiw" element={<Interveiw />}>
+
+                    </Route>
+                    <Route exact path="/achievement" element={<Achievement />}>
 
                     </Route>
                 </Routes>

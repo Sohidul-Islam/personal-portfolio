@@ -8,13 +8,13 @@ const Text1 = styled(Typography)`
 font-size: 18px !important;
 color: #ff014f;
 font-weight: 400 !important;
-font-family: "Poppins", sans-serif;
+font-family: "Poppins", sans-serif !important;
 `
 const Text2 = styled(Typography)`
 font-size: 30px !important;
 color: #000;
 font-weight: 800 !important;
-font-family: "Montserrat", sans-serif;
+font-family: "Montserrat", sans-serif !important;
 `
 const TextBox = styled(Box)`
 margin: 40px 0px;

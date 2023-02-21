@@ -10,15 +10,15 @@ const NavContainer = styled(Box)`
     display: flex;
     background: linear-gradient(145deg, #e2e8ec, #ffffff);
     box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
-    @media ${device2.mobileL}{
+
+    @media ${device2.tablet}{
         width: 100%;
         flex-direction: column;
     }
     `;
 const NavItemBox = styled(Box)`
     display: flex;
-    flex-basis: 25%;
-
+    flex-basis: 20%;
     
     `;
 const NavItem = styled(Link)`

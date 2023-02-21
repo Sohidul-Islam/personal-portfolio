@@ -39,7 +39,7 @@ export default function Features() {
         font-size: 60px !important;
     `
     return (
-        <Box sx={{ px: 2 }}>
+        <Box sx={{ px: 2 }} id="features">
             <Text1>
                 Features
             </Text1>

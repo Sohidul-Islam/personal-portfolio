@@ -41,7 +41,7 @@ const Home = () => {
     const [themeColor, setThemeColor] = useState(lightTheme);
     return (
         <ThemeProvider theme={themeColor}>
-            <Box sx={{ flexGrow: 1 }}>
+            <Box sx={{ flexGrow: 1 }} id="home">
                 <Grid container spacing={2} sx={{ width: "100%" }}>
                     <Grid item xs={12} md={8}>
                         <Box

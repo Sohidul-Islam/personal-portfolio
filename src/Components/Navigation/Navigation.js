@@ -16,6 +16,7 @@ import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 // image section
 import img1 from '../../images/me-2.png';
@@ -24,15 +25,18 @@ import Home from '../Home/Home';
 import Features from './../Features/Features';
 import Portfolio from './../Portfolio/Portfolio';
 import Resume from '../Resume/Resume';
+import Testimonials from '../Testimonials/Testimonials';
+import Contact from '../Contact/Contact';
+import ScrollButton from '../ScrollButton/ScrollButton';
 const drawerWidth = 240;
 const navItems = ['HOME',
     'FEATURES',
     'PORTFOLIO',
     'RESUME',
-    'TESTIMONIAL',
-    'CLIENTS',
-    'PRICING',
-    'BLOG',
+    // 'TESTIMONIAL',
+    // 'CLIENTS',
+    // 'PRICING',
+    // 'BLOG',
     'CONTACTS',
 ];
 
@@ -100,6 +104,9 @@ const Navigation = (props) => {
 
     const [themeColor, setThemeColor] = useState(lightTheme);
 
+
+
+
     const drawer = (
         <ThemeProvider theme={themeColor}>
             <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -118,10 +125,11 @@ const Navigation = (props) => {
                 </Typography>
                 <Divider />
                 <List>
+                    {/* sidebar section */}
                     {navItems.map((item) => (
                         <ListItem key={item} disablePadding>
                             <ListItemButton sx={{ textAlign: 'center' }}>
-                                <ListItemText primary={item} />
+                                <Link style={{ color: "black", cursor: "pointer", marginRight: "16px" }} to={item.toLowerCase()} spy={true} smooth={true} offset={-150} duration={500}> {item}</Link>
                             </ListItemButton>
                         </ListItem>
                     ))}
@@ -165,11 +173,10 @@ const Navigation = (props) => {
 
                                 </Stack>
                             </Typography>
-                            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                            {/* Navbar top */}
+                            <Box sx={{ display: { xs: 'none', sm: 'block', } }}>
                                 {navItems.map((item) => (
-                                    <Button key={item} sx={{ color: '#000' }}>
-                                        {item}
-                                    </Button>
+                                    <Link style={{ color: "black", cursor: "pointer", marginRight: "16px" }} to={item.toLowerCase()} spy={true} smooth={true} offset={-150} duration={500}> {item}</Link>
                                 ))}
                             </Box>
                         </ThemeProvider>
@@ -195,6 +202,7 @@ const Navigation = (props) => {
                 <Container maxWidth="xl">
                     <Box component="main" sx={{ py: 10 }}  >
                         <Toolbar />
+
                         <Home />
                         <Divider sx={{ my: 8 }} variant="middle" />
                         <Features />
@@ -202,6 +210,12 @@ const Navigation = (props) => {
                         <Portfolio />
                         <Divider sx={{ my: 8 }} variant="middle" />
                         <Resume />
+                        <Divider sx={{ my: 8 }} variant="middle" />
+                        <Contact />
+                        <ScrollButton />
+
+
+                        {/* <Button onClick={scrollToTop}>Top</Button> */}
                     </Box>
                 </Container>
             </Box>

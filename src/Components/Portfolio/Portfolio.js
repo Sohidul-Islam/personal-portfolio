@@ -56,7 +56,7 @@ export default function Portfolio() {
         font-size: 60px !important;
     `
     return (
-        <Box sx={{ px: 2 }}>
+        <Box sx={{ px: 2 }} id="portfolio" >
             <Text1>
                 VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK
             </Text1>
