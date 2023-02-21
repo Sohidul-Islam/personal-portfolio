@@ -115,7 +115,7 @@ const Navigation = (props) => {
                         <Avatar
                             alt="Remy Sharp"
                             src={img1}
-                            sx={{ width: 56, height: 56 }}
+                            sx={{ width: 40, height: 40 }}
                         />
                         <Typography variant='brand' theme={theme}>
                             SOHIDUL
@@ -152,7 +152,7 @@ const Navigation = (props) => {
                                 aria-label="open drawer"
                                 edge="start"
                                 onClick={handleDrawerToggle}
-                                sx={{ mr: 2, display: { sm: 'none' } }}
+                                sx={{ m: 1, display: { sm: 'none' } }}
                             >
                                 <MenuIcon />
                             </StyledMenuIcon>
@@ -165,7 +165,7 @@ const Navigation = (props) => {
                                     <Avatar
                                         alt="Remy Sharp"
                                         src={img1}
-                                        sx={{ width: 80, height: 80, }}
+                                        sx={{ width: 40, height: 40, }}
                                     />
                                     <Typography variant='brand' theme={theme}>
                                         SOHIDUL
@@ -200,7 +200,7 @@ const Navigation = (props) => {
                     </Drawer>
                 </Box>
                 <Container maxWidth="xl">
-                    <Box component="main" sx={{ py: 10 }}  >
+                    <Box component="main" sx={{ py: 4 }}  >
                         <Toolbar />
 
                         <Home />

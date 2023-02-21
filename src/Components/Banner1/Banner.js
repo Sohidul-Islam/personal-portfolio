@@ -7,10 +7,12 @@ export default function Banner() {
     const ContainerBox = styled(Box)`
     padding-bottom:0px;
     position: relative;
+    
     `;
     const OuterBox = styled(Box)`
         position: relative;
         z-index: 2;
+        margin: 0px auto;
         &::before{
             position: absolute;
             z-index: -1;
@@ -38,6 +40,7 @@ export default function Banner() {
     max-width: 100%;
     height: 100%;
     width: 100%;
+    margin: 0 auto;
     `
 
     return (
