@@ -75,6 +75,7 @@ const ContactForm = () => {
             .then((result) => {
                 setSuccess(true);
                 setOpen(true);
+                setEmail({})
             }, (error) => {
                 setSuccess(false);
                 setOpen(true);
@@ -162,17 +163,17 @@ const ContactForm = () => {
 
                     {errorMessage.length > 0 && <>< Alert sx={{ my: 2 }} variant="outlined" severity="error">{errorMessage}</Alert> <AlertMessage /></>}
                     <FormContentInner>
-                        <InputFieldColOne onBlur={onBlurHandler} required name="name" type={"text"} id="input-name" label="Your Name" variant="outlined" />
+                        <InputFieldColOne onBlur={onBlurHandler} defaultValue={email?.name} required name="name" type={"text"} id="input-name" label="Your Name" variant="outlined" />
                     </FormContentInner>
 
                     <FormContentInner>
-                        <InputFieldColOne onBlur={onBlurHandler} required name="email" type={"email"} id="input-email" label="Your email" variant="outlined" />
+                        <InputFieldColOne onBlur={onBlurHandler} defaultValue={email?.email} required name="email" type={"email"} id="input-email" label="Your email" variant="outlined" />
                     </FormContentInner>
                     <FormContentInner>
-                        <InputFieldColOne onBlur={onBlurHandler} required name="subject" type={"text"} id="input-subject" label="Subject" variant="outlined" />
+                        <InputFieldColOne onBlur={onBlurHandler} defaultValue={email?.subject} required name="subject" type={"text"} id="input-subject" label="Subject" variant="outlined" />
                     </FormContentInner>
                     <FormContentInner>
-                        <InputFieldColOne onBlur={onBlurHandler} required name="message" type={"text"} id="outlined-basic" label="Message" variant="outlined" multiline
+                        <InputFieldColOne onBlur={onBlurHandler} defaultValue={email?.message} required name="message" type={"text"} id="outlined-basic" label="Message" variant="outlined" multiline
                             minRows={16} />
                     </FormContentInner>
                     <FormContentInner>
