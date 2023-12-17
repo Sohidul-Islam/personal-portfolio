@@ -101,6 +101,7 @@ const PortfolioCard = ({ data }) => {
     height: 100%;
     transition: 0.5s all ease-in-out;
   `;
+  
 
   return (
     <Container>
