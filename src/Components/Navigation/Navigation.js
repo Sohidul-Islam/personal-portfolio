@@ -126,8 +126,8 @@ const Navigation = (props) => {
                 <Divider />
                 <List>
                     {/* sidebar section */}
-                    {navItems.map((item) => (
-                        <ListItem key={item} disablePadding>
+                    {navItems.map((item, index) => (
+                        <ListItem key={index} disablePadding>
                             <ListItemButton sx={{ textAlign: 'center' }}>
                                 <Link style={{ color: "black", cursor: "pointer", marginRight: "16px" }} to={item.toLowerCase()} spy={true} smooth={true} offset={-150} duration={500}> {item}</Link>
                             </ListItemButton>
@@ -175,8 +175,8 @@ const Navigation = (props) => {
                             </Typography>
                             {/* Navbar top */}
                             <Box sx={{ display: { xs: 'none', sm: 'block', } }}>
-                                {navItems.map((item) => (
-                                    <Link style={{ color: "black", cursor: "pointer", marginRight: "16px" }} to={item.toLowerCase()} spy={true} smooth={true} offset={-150} duration={500}> {item}</Link>
+                                {navItems.map((item, index) => (
+                                    <Link key={index} style={{ color: "black", cursor: "pointer", marginRight: "16px" }} to={item.toLowerCase()} spy={true} smooth={true} offset={-150} duration={500}> {item}</Link>
                                 ))}
                             </Box>
                         </ThemeProvider>

@@ -3,7 +3,6 @@ import React from 'react'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import styled from 'styled-components';
 export default function Card({ feature }) {
-    // console.log("Feature: ", feature)
 
 
     const IconBox1 = styled.div`

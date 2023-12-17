@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 const ButtonType1 = ({ children, ...props }) => {
-    console.log("icon here ", props)
+    
     const { link } = props;
     const Button = styled.a`
     background-image: linear-gradient(145deg, #e2e8ec, #ffffff);

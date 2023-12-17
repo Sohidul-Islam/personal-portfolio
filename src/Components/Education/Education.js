@@ -9,7 +9,7 @@ const Education = () => {
 
     const EducationInfo = [
         {
-            title: "BSc & Computer Science & Engineering",
+            title: "BSc in Computer Science & Engineering",
             subtitle: "Port City International University (2019-2023)",
             badge: "3.92/4",
             desc: "Port City International University's BSc program offers a dynamic education with state-of-the-art facilities, experienced faculty, and diverse extracurriculars, preparing students to excel in their chosen fields and become community leaders."
@@ -17,7 +17,7 @@ const Education = () => {
         {
             title: "Higher Secondary School Certificates",
             subtitle: "Moulavi Samsul Karim College (2016-2018)",
-            badge: "2.92/5",
+            badge: "3.50/5",
             desc: "Obtained Higher Secondary School Certificate from Moulavi Samsul Karim College. Fostered academic excellence & personal growth, gained valuable skills & extracurricular experience."
         },
         {

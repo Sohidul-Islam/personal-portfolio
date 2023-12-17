@@ -8,7 +8,6 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 const ColorModeContext = React.createContext({ toggleColorMode: () => { } });
 
 const LightDarkModeHandler = () => {
-    // console.log("theme: ", window.theme.palette)
     const theme = useTheme();
     const colorMode = React.useContext(ColorModeContext);
     return (

@@ -108,7 +108,7 @@ const ProfessionalSkills = () => {
                             <Text2>Design Skill</Text2>
                         </TextBox>
 
-                        {DesignSkill.map((data, index) => <Loader label={data.label} percentage={data.percentage}></Loader>)}
+                        {DesignSkill.map((data, index) => <Loader key={index} label={data.label} percentage={data.percentage}></Loader>)}
                     </Grid>
                     <Grid item xs={4} sm={4} md={6} xl={6} >
                         <TextBox>
@@ -116,7 +116,7 @@ const ProfessionalSkills = () => {
                             <Text2>Development Skill</Text2>
                         </TextBox>
 
-                        {DevelopmentSkill.map((data, index) => <Loader label={data.label} percentage={data.percentage}></Loader>)}
+                        {DevelopmentSkill.map((data, index) => <Loader key={index} label={data.label} percentage={data.percentage}></Loader>)}
                     </Grid>
                 </Grid>
             </Box>

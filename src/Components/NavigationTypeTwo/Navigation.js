@@ -43,16 +43,8 @@ const NavItem = styled(Link)`
     }
     `;
 export default function Navigation({ item }) {
-    // console.log(item);
-
 
     const [navItem, setNavItem] = useState(item);
-
-    // console.log("Responsive: ", device2);
-    // style={{ color: isActive ? "#ff014f" : "#1e212", boxShadow: isActive ? "5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff" : "#1e212", }}
-    // useEffect(() => {
-    //     setNavItem(item);
-    // }, [navItem])
     const isActiveFunction = async (id) => {
         setNavItem([]);
         let prev = await navItem.findIndex(x => x.isActive === true);

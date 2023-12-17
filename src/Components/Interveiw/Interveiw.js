@@ -24,18 +24,58 @@ const Interveiw = () => {
 
     const CompanyExp = [
         {
-            title: "No Comany Experiences",
-            subtitle: "Seeking a job",
-            badge: "Seeking a job",
-            desc: "Recent graduate seeking an entry-level position to apply academic knowledge and gain hands-on experience in the field. Diligent and eager to learn."
+            title: "Interview at MEDIUSWARE as a Fullstack Developer",
+            subtitle: "at Shemoli, Dhaka, Bangladesh",
+            badge: "Not confirmed yet",
+            desc: "It was December, 2023 when I was geting chance in  there interview board"
         },
+        {
+            title: "Interview at HUBSPOT as a Fullstack Developer",
+            subtitle: "at Dhanmandi, Dhaka, Bangladesh",
+            badge: "Not confirmed yet",
+            desc: "It was October, 2023 when I was geting chance in  there interview board"
+        },
+        {
+            title: "Interview at KadriTech as a Frontend Developer",
+            subtitle: "at Gulshan Niketon, Dhaka, Bangladesh",
+            badge: "Confirmed",
+            desc: "It was March 27, 2023 when I was geting chance in  there interview board"
+        },
+        {
+            title: "Interview at AgainSoft as a Digital Marketing",
+            subtitle: "at Agargaon, Dhaka, Bangladesh",
+            badge: "Not Confirmed",
+            desc: "It was February 6, 2023 when I was geting chance in there interview board"
+        },
+     
+       
     ]
     const JobExp = [
         {
-            title: "No Job Experiences",
-            subtitle: "Seeking a job",
-            badge: "Seeking a job",
-            desc: "Recent graduate seeking an entry-level position to apply academic knowledge and gain hands-on experience in the field. Diligent and eager to learn."
+            title: "Frontend developer at KadriTechAB",
+            subtitle: "Septembar 2023 - Current",
+            badge: "Full Time",
+            desc: `Successfully implemented complex features for the featured project, Lyxa , an e-commerce site for food, grocery, and pharmaceutical products.
+            Versatile feature management: zones, sales, accounts, admin.
+            Collaborated for tailored solutions with stakeholders.
+            Translated business needs into enhanced UX.
+            Proficient in web dev, UX design, project management.
+            Gained real-world business insights at KadriTech AB.
+            Ready to apply skills and experience in future roles.`
+        },
+        {
+            title: "Frontend developer at KadriTechAB",
+            subtitle: "Apr 2023 - September 2023",
+            badge: "Intern",
+            desc: `Created two official websites: kadritech.se and med.kadritech.se, serving as the primary online platforms for KadriTech and their business partner.
+            Played a key role in the design and development of the websites, ensuring intuitive user interfaces and responsive design elements.
+            Successfully implemented complex features for the featured project, Lyxa , an e-commerce site for food, grocery, and pharmaceutical products.
+            Versatile feature management: zones, sales, accounts, admin.
+            Collaborated for tailored solutions with stakeholders.
+            Translated business needs into enhanced UX.
+            Proficient in web dev, UX design, project management.
+            Gained real-world business insights at KadriTech AB.
+            Ready to apply skills and experience in future roles.`
         }
     ]
 

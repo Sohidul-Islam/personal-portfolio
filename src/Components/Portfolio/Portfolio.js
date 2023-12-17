@@ -8,9 +8,23 @@ import doctorsPortal from '../../images/moc/doctors portal.png';
 import weatherLive from '../../images/moc/weather.png';
 import bookArchieve from '../../images/moc/book.png';
 import calculator from '../../images/moc/calculator.png';
+import kadritech from '../../images/moc/kadritech.png';
+import kadrimedtech from '../../images/moc/kadrimedtech.png';
 
 export default function Portfolio() {
     const PortfolioData = [
+        {
+            title: 'Official Site for KadriTechAB',
+            image: kadritech,
+            live: "https://kadritech.se/",
+            files: "https://kadritech.se/"
+        },
+        {
+            title: 'Official Site for KadriMedTech',
+            image: kadrimedtech,
+            live: "https://med.kadritech.se/",
+            files: "https://med.kadritech.se/"
+        },
         {
             title: 'E Commerce Site',
             image: ecommerceImg,
@@ -49,11 +63,16 @@ export default function Portfolio() {
         text-transform: uppercase;
     `
     const Text2 = styled(Typography)`
-        color: #3c3e41;
-        text-align: center;
-        font-family: 'Montserrat', sans-serif !important;
+    color: #3c3e41;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 60px !important;
+    
+    @media (max-width: 600px) {
         font-weight: 600 !important;
-        font-size: 60px !important;
+        font-size: 32px !important;
+    }
     `
     return (
         <Box sx={{ px: 2 }} id="portfolio" >

@@ -50,7 +50,7 @@ export default function Features() {
                 <Grid container spacing={8} columns={{ xs: 4, sm: 8, md: 12, xl: 12 }} >
 
                     {
-                        featureData.map((feature, index) => <Grid item xs={4} sm={4} md={6} xl={4} ><Card keys={index} feature={feature} /></Grid>)
+                        featureData.map((feature, index) => <Grid item key={index} xs={4} sm={4} md={6} xl={4} ><Card keys={index} feature={feature} /></Grid>)
                     }
                 </Grid>
 

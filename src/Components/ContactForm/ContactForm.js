@@ -75,42 +75,40 @@ const ContactForm = () => {
             .then((result) => {
                 setSuccess(true);
                 setOpen(true);
-                console.log("Successfull: ", result.text);
             }, (error) => {
                 setSuccess(false);
                 setOpen(true);
-                console.log("error: ", error.text);
             });
     }
 
     const sendEmail = (e) => {
         e.preventDefault();
+        setSuccess(false);
+        setOpen(false);
 
-        console.log("email: ", email?.name.length);
+        if (email?.name?.length > 0 && email?.email?.length > 0 && email?.subject?.length > 0 && email?.message?.length > 0) {
 
-        if (email?.name?.length > 0 && email?.phone?.length > 0 && email?.email?.length > 0 && email?.subject?.length > 0 && email?.message?.length > 0) {
 
-            if (/([+]?\d{1,2}[.-\s]?)?(\d{3}[.-]?){2}\d{4}/g.test(email?.phone)) {
-                // console.log("phone Passed");
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email?.email)) {
                 setErrorMessage("");
-                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email?.email)) {
-                    // console.log("phone if email Passed");
-                    setErrorMessage("");
-                    emailSender();
-                }
-                else {
-                    // console.log("email Failed");
-                    setErrorMessage("invalid email ex: sample@abc.xyz");
-                }
+                emailSender();
             }
             else {
-                // console.log("phone Failed");
-                setErrorMessage("invalid phone number ex: 01854107699");
+                setSuccess(false);
+                setOpen(true);
+                setErrorMessage("invalid email ex: sample@abc.xyz");
             }
+
+        }
+        else if (Object.keys(email).length === 0) {
+            setSuccess(false);
+            setOpen(true);
+            setErrorMessage("Fill the form properly")
         }
         else {
+            setSuccess(false);
+            setOpen(true);
             setErrorMessage("Fill the form properly")
-            console.log("error");
         }
 
     };
@@ -122,7 +120,6 @@ const ContactForm = () => {
         oldValue[name] = value;
         setEmail(oldValue);
 
-        console.log("env: ", process.env);
     }
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
@@ -162,13 +159,12 @@ const ContactForm = () => {
 
                 <FormContent>
 
+
+                    {errorMessage.length > 0 && <>< Alert sx={{ my: 2 }} variant="outlined" severity="error">{errorMessage}</Alert> <AlertMessage /></>}
                     <FormContentInner>
-                        {errorMessage.length > 0 && < Alert sx={{ my: 2 }} variant="outlined" severity="error">{errorMessage}</Alert>}
-                        <FormContentInnerHalf>
-                            <InputFieldColTwo onBlur={onBlurHandler} required name="name" type={"text"} id="input-name" label="Your Name" variant="outlined" />
-                            <InputFieldColTwo onBlur={onBlurHandler} required name="phone" type={"tel"} id="input-number" label="Phone Number" variant="outlined" />
-                        </FormContentInnerHalf>
+                        <InputFieldColOne onBlur={onBlurHandler} required name="name" type={"text"} id="input-name" label="Your Name" variant="outlined" />
                     </FormContentInner>
+
                     <FormContentInner>
                         <InputFieldColOne onBlur={onBlurHandler} required name="email" type={"email"} id="input-email" label="Your email" variant="outlined" />
                     </FormContentInner>

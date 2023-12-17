@@ -55,10 +55,10 @@ const Home = () => {
                                     <Typography sx={{ fontSize: 24, fontWeight: 400, fontFamily: '"Poppins", sans-serif' }}>
                                         WELCOME TO MY WORLD
                                     </Typography>
-                                    <Typography variant="span" sx={{ fontSize: 60, fontWeight: 800, fontFamily: '"Poppins", sans-serif' }}>Hi, I’m <Typography variant="span" sx={{ fontSize: 60, color: '#ff014f' }}>Sohidul Islam
+                                    <Typography variant="span" sx={{ fontSize: 40, fontWeight: 800, fontFamily: '"Poppins", sans-serif' }}>Hi, I’m <Typography variant="span" sx={{ fontSize: 40, color: '#ff014f' }}>Sohidul Islam
                                     </Typography>
                                         <br></br>
-                                        <Typography variant="span" sx={{ fontSize: 48, color: '#ff014f' }}>
+                                        <Typography variant="span" sx={{ fontSize: 40, color: '#ff014f' }}>
                                             a </Typography>
                                     </Typography>
                                     <TypeAnimation
@@ -74,7 +74,7 @@ const Home = () => {
                                             1000,
                                         ]}
                                         speed={50} // Custom Speed from 1-99 - Default Speed: 40
-                                        style={{ fontSize: '48px' }}
+                                        style={{ fontSize: '40px' }}
                                         wrapper="span" // Animation will be rendered as a <span>
                                         repeat={Infinity} // Repeat this Animation Sequence infinitely
                                     />
