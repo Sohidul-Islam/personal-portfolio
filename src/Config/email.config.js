@@ -1,7 +1,7 @@
 const EmailJSConfig = {
-    service_id: process.env.REACT_APP_SERVICE_ID,
-    template_id: process.env.REACT_APP_TEMPLATE_ID,
-    public_key: process.env.REACT_APP_PUBLIC_KEY,
+    service_id: "service_31lseed",
+    template_id: "template_astqigd",
+    public_key: "GLPFYF8eWbKOMaclB",
 };
 
 export default EmailJSConfig;
