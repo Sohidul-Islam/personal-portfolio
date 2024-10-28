@@ -11,19 +11,19 @@ const Education = () => {
         {
             title: "BSc in Computer Science & Engineering",
             subtitle: "Port City International University (2019-2023)",
-            badge: "3.92/4",
+            // badge: "3.92/4",
             desc: "Port City International University's BSc program offers a dynamic education with state-of-the-art facilities, experienced faculty, and diverse extracurriculars, preparing students to excel in their chosen fields and become community leaders."
         },
         {
             title: "Higher Secondary School Certificates",
             subtitle: "Moulavi Samsul Karim College (2016-2018)",
-            badge: "3.50/5",
+            // badge: "3.50/5",
             desc: "Obtained Higher Secondary School Certificate from Moulavi Samsul Karim College. Fostered academic excellence & personal growth, gained valuable skills & extracurricular experience."
         },
         {
             title: "Secondary School Certificates",
             subtitle: "Chhagalnaiya Academy (2016)",
-            badge: "4.67/5",
+            // badge: "4.67/5",
             desc: "At Chhagalnaiya Academy, SSC is a major academic milestone. We train students rigorously, offer a conducive learning environment, personalized attention & assessments to track academic performance."
         },
     ]

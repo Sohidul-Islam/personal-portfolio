@@ -10,9 +10,16 @@ import bookArchieve from '../../images/moc/book.png';
 import calculator from '../../images/moc/calculator.png';
 import kadritech from '../../images/moc/kadritech.png';
 import kadrimedtech from '../../images/moc/kadrimedtech.png';
+import reactScrollPagify from '../../images/moc/react-scroll-pagify-logo.png';
 
 export default function Portfolio() {
     const PortfolioData = [
+        {
+            title: 'React scroll pagify',
+            image: reactScrollPagify,
+            live: "https://www.npmjs.com/package/react-scroll-pagify",
+            files: "https://github.com/Sohidul-Islam/react-scrollify"
+        },
         {
             title: 'Official Site for KadriTechAB',
             image: kadritech,

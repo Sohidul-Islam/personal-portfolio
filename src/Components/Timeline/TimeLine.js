@@ -135,9 +135,9 @@ export default function TimeLine({ data }) {
                                     <Title>{item.title}</Title>
                                     <SubTitle>{item.subtitle}</SubTitle>
                                 </Box>
-                                <Badge sx={{ display: "flex", flexDirection: "column" }}>
+                                {item.badge && <Badge sx={{ display: "flex", flexDirection: "column" }}>
                                     <p>{item.badge}</p>
-                                </Badge>
+                                </Badge>}
                             </Heading>
 
                             <Divider />
