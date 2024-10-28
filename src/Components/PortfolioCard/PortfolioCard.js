@@ -67,7 +67,7 @@ const PortfolioCard = ({ data }) => {
     text-transform: uppercase;
     margin-right: 16px;
   `;
-  const CardLikeButton = styled.button((props)=>{
+  const CardLikeButton = styled.button((props) => {
     return `
     font-size: 20px !important;
     background: transparent;
@@ -76,7 +76,7 @@ const PortfolioCard = ({ data }) => {
     line-height: 30px;
     font-weight: 600;
     text-decoration: none;
-    color: ${props?.like ? "blue":"#ff014f"};
+    color: ${props?.like ? "blue" : "#ff014f"};
     float: right;
     text-transform: uppercase;
     margin-right: 16px;
@@ -101,7 +101,7 @@ const PortfolioCard = ({ data }) => {
     height: 100%;
     transition: 0.5s all ease-in-out;
   `;
-  
+
 
   return (
     <Container>
@@ -114,7 +114,7 @@ const PortfolioCard = ({ data }) => {
           <CardButton href={data.live}>Live</CardButton>
           <CardButton href={data.files}>Files</CardButton>
           <CardLikeButton
-          like={isLike}
+            like={isLike}
             onClick={() => {
               setIsLike((old) => {
                 const temp = !old;
@@ -124,9 +124,9 @@ const PortfolioCard = ({ data }) => {
                     return prev + 1;
                   });
                 } else {
-                    setLIke((prev) => {
-                        return prev - 1;
-                      });
+                  setLIke((prev) => {
+                    return prev - 1;
+                  });
                 }
                 return temp;
               });
